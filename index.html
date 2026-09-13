@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aventura Pokemon</title>
+
+    <link rel="stylesheet" href="assets/css/estilo.css">
+
+</head>
+
+<body>
+
+    <!-- Tela inicial -->
+    <div id="inicio">
+
+        <h2>Prepare-se para a aventura!</h2>
+        <button id="botaoJogar">JOGAR</button>
+
+    </div>
+
+
+    <!-- Jogo -->
+    <div id="jogo">
+
+        <!-- Pontuação -->
+        <h2 class="pontos">
+            Pontos: <span id="pontos">0</span>
+        </h2>
+
+
+        <!-- Recorde -->
+        <h2 class="recorde">
+            Recorde: <span id="recorde">0</span>
+        </h2>
+
+
+        <!-- Vidas -->
+        <div id="vidas" class="vidas">
+
+            <img
+                id="vida1"
+                class="pokebola"
+                src="assets/img/pokebola.png"
+                alt="Vida"
+            >
+
+            <img
+                id="vida2"
+                class="pokebola"
+                src="assets/img/pokebola.png"
+                alt="Vida"
+            >
+
+            <img
+                id="vida3"
+                class="pokebola"
+                src="assets/img/pokebola.png"
+                alt="Vida"
+            >
+
+        </div>
+
+
+        <!-- Personagem -->
+        <div id="personagem"></div>
+
+
+        <!-- Vilão -->
+        <div id="vilao"></div>
+
+
+        <!-- Tela de Game Over -->
+        <div id="gameOver">
+
+            <h2>GAME OVER!</h2>
+
+            <p>
+                Pontuação:
+                <span id="pontuacaoFinal">0</span>
+            </p>
+
+            <p>
+                Recorde:
+                <span id="recordeFinal">0</span>
+            </p>
+
+            <button id="botaoNovamente">
+                JOGAR NOVAMENTE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/jogo.js"></script>
+</body>
+
+</html>

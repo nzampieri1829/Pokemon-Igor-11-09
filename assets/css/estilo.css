@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+
+/* =========================
+   TELA INICIAL
+========================= */
+
+#inicio {
+    width: 500px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border: 3px solid blue;
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-top: 15%;
+    margin-left: 30%;
+}
+
+#inicio h2 {
+    font-size: 28px;
+    color: #333;
+
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÃO JOGAR
+========================= */
+
+#botaoJogar {
+    background-color: rgb(58, 58, 148);
+
+    color: white;
+
+    font-size: 22px;
+
+    padding: 15px 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#botaoJogar:hover {
+    background-color: rgb(143, 143, 158);
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   ÁREA DO JOGO
+========================= */
+
+#jogo {
+    width: 80%;
+    height: 450px;
+
+    margin-top: 8%;
+    margin-left: 10%;
+    border: 3px solid #222;
+
+    background-image: url("../img/cenario.png");
+
+    background-position: 0px -250px;
+
+    background-repeat: repeat-x;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: none;
+}
+
+
+/* =========================
+   PONTOS E RECORDE
+========================= */
+
+#jogo h2 {
+    width: 160px;
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+    padding: 8px;
+
+    background-color: white;
+
+    border: 2px solid  blue;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.pontos {
+    color: #222;
+}
+
+.recorde {
+    margin-top: 5px !important;
+
+    color: blue;
+}
+
+
+/* =========================
+   VIDAS
+========================= */
+
+.vidas {
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 10px;
+    margin-left: 15px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.pokebola {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   PERSONAGEM
+========================= */
+
+#personagem {
+    width: 75px;
+    height: 90px;
+
+    position: absolute;
+
+    bottom: 70px;
+    left: 20%;
+
+    background-image: url("../img/jogador.png");
+
+    background-size: 400% 200%;
+
+    background-repeat: no-repeat;
+
+    animation: correr 0.8s steps(1) infinite;
+
+    z-index: 5;
+}
+
+
+@keyframes correr {
+
+    0% {
+        background-position: 0% 0%;
+    }
+
+    12.5% {
+        background-position: 33.33% 0%;
+    }
+
+    25% {
+        background-position: 66.66% 0%;
+    }
+
+    37.5% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    62.5% {
+        background-position: 33.33% 100%;
+    }
+
+    75% {
+        background-position: 66.66% 100%;
+    }
+
+    87.5% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+/* =========================
+   VILÃO
+========================= */
+
+#vilao {
+    width: 80px;
+    height: 90px;
+
+    position: absolute;
+
+    bottom: 70px;
+    right: -80px;
+
+    background-image: url("../img/vilao.png");
+
+    background-size: 400% 400%;
+
+    background-repeat: no-repeat;
+
+    animation: atacar 0.8s steps(1) infinite;
+
+    z-index: 5;
+}
+
+
+@keyframes atacar {
+
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 33.33% 0%;
+    }
+
+    50% {
+        background-position: 66.66% 0%;
+    }
+
+    75% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+/* =========================
+   GAME OVER
+========================= */
+
+#gameOver {
+    width: 400px;
+    max-width: 90%;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 3px solid blue;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: none;
+
+    z-index: 100;
+}
+
+
+#gameOver h2 {
+    width: auto !important;
+
+    margin: 0 0 15px 0 !important;
+
+    padding: 0 !important;
+
+    background-color: transparent;
+
+    border: none !important;
+
+    color: blue;
+
+    font-size: 35px;
+
+    font-style: normal;
+}
+
+
+#gameOver p {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   BOTÃO NOVAMENTE
+========================= */
+
+#botaoNovamente {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    background-color: blue;
+
+    color: white;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#botaoNovamente:hover {
+    background-color: rgb(142, 142, 207);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    #inicio {
+        padding: 30px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 23px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #botaoJogar {
+        font-size: 18px;
+
+        padding: 12px 35px;
+    }
+
+    #jogo {
+        width: 95%;
+    }
+}
